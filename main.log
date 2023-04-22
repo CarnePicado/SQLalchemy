@@ -1,0 +1,10 @@
+INFO 2023-04-22 12:24:50,980 - 
+        Function name: print_decor
+        Arguments name: (<function publishers_books_sold at 0x7fa81ed09e10>,) and {}.
+        Function has been returned: <function print_decor.<locals>.new_function at 0x7fa81ed09ea0>.
+        
+INFO 2023-04-22 12:24:51,024 - 
+        Function name: new_function
+        Arguments name: () and {'publisher_name': 'Pearson'}.
+        Function has been returned: [('Modern Operating Systems', 'OZON', 16.0, datetime.datetime(2018, 10, 25, 10, 59, 56, 230000))].
+        

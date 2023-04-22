@@ -2,6 +2,7 @@ import sqlalchemy
 from sqlalchemy.orm import sessionmaker
 import json
 
+from log import logger
 from models import create_tables, Publisher, Shop, Book, Stock, Sale
 
 
@@ -26,13 +27,14 @@ for record in data:
     }[record.get('model')]
     session.add(model(id=record.get('pk'), **record.get('fields')))
 
-
+@logger
 def print_decor(old_function):
     def new_function(*args, **kwargs):
         result = old_function(*args, **kwargs)
         return result
     return new_function
 
+@logger
 @print_decor
 def publishers_books_sold(publisher_name=None, publisher_id=None):
     if publisher_name is not None:
